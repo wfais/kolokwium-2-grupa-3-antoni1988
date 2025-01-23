@@ -22,11 +22,11 @@ def create_app():
     # label_instruct = umocuj przez pack
     label_instruct = tk.Label(root, text="Wpisz coś:")
     label_instruct.pack()
-    # entry_text = 
+    # entry_text =
     entry_text = tk.Entry(root)
     entry_text.pack()
     # label_result = tk.Label(...
-    label_result = tk.Label(root)
+    label_result = tk.Label(root, text="Tu pojawi się Twój tekst")
     label_result.pack()
     # zdefiniuj funkcję show_text() pobierającą wpisany tekst i wyświetlającą w label_result
     def show_text():
