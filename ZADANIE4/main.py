@@ -8,21 +8,20 @@ def create_and_filter_data():
     3) Odfiltruj wiersze, w których kolumna 'A' spełnia pewien warunek (np. > 50).
     4) Zwróć przefiltrowany DataFrame.
     """
-    # ustaw ziarno losowości np. np.random.seed(123)
+    # ustaw ziarno losowości
+    np.random.seed(123)
+    
+    arr = np.random.randint(0, 100, (10, 2))
 
-    # np.random.randint(...) - stwórz losową tablicę (rozmiar i zakres do wyboru)
-    # arr = ...
+    df = pd.DataFrame(arr, columns=['A', 'B'])
 
-    # df = 
+    # warunek z polecenia
+    filtered_df = df[df['A'] > 50]
 
-
-    # filtered_df = ...  
-
-    # return ...
-    pass
+    return filtered_df 
 
 if __name__ == '__main__':
     # Przykładowe wywołanie
     result_df = create_and_filter_data()
-    print("Otrzymany DataFrame (A > 50):")
+    print("Elementy spełniające warunek A > 50 :")
     print(result_df)
